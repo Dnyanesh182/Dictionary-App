@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Dictionary App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightCream: '#F4EAD5',
+                        goldenGlow: '#F7C873',
+                        sunsetOrange: '#E97A53',
+                        deepBlue: '#405D99',
+                        nightNavy: '#23395B',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-lightCream min-h-screen flex flex-col font-poppins">
+    <!-- Navbar -->
+    <nav class="bg-deepBlue shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-goldenGlow text-2xl font-bold hover:text-sunsetOrange transition">📘
+                Dictionary App</a>
+            <div class="flex space-x-6">
+                <a href="index.html" class="text-goldenGlow font-medium">Home</a>
+                <a href="about.html" class="text-lightCream hover:text-goldenGlow transition">About</a>
+                <a href="contact.html" class="text-lightCream hover:text-goldenGlow transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-yellow-400 to-red-500 text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Explore Words with Ease</h1>
+                <p class="text-xl md:text-2xl mb-8">Find definitions, synonyms, and enhance your vocabulary
+                    effortlessly.</p>
+                <div class="flex flex-col md:flex-row justify-center">
+                    <input id="searchinput" type="text" placeholder="Enter a word..."
+                        class="p-4 rounded-lg md:rounded-r-none text-deepBlue focus:outline-none focus:ring-2 focus:ring-lightCream w-full md:w-auto md:flex-1 max-w-md mb-4 md:mb-0 input-focus-effect">
+                    <button id="searchbtn"
+                        class="bg-deepBlue hover:bg-nightNavy text-lightCream p-4 rounded-lg md:rounded-l-none transition hover-grow">
+                        🔍 Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Results Section -->
+    <main class="container mx-auto px-6 py-10 flex-grow">
+        <div id="result" class="hidden bg-white shadow-lg rounded-lg p-6 text-center fade-in">
+            <h2 id="word" class="text-2xl font-bold text-deepBlue mb-4"></h2>
+            <p id="definition" class="text-gray-700"></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-nightNavy text-lightCream py-4 text-center">
+        <p>🚀 Built with ❤️ by Web Development Masters &copy; 2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>
