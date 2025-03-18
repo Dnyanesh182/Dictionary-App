@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightCream: '#F4EAD5',
+                        goldenGlow: '#F7C873',
+                        sunsetOrange: '#E97A53',
+                        deepBlue: '#405D99',
+                        nightNavy: '#23395B',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-lightCream min-h-screen flex flex-col font-poppins">
+    <!-- Navbar -->
+    <nav class="bg-deepBlue shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-goldenGlow text-2xl font-bold hover:text-sunsetOrange">📘 Dictionary App</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-lightCream hover:text-goldenGlow transition">Home</a>
+                <a href="about.html" class="text-goldenGlow font-medium">About</a>
+                <a href="contact.html" class="text-lightCream hover:text-goldenGlow transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-lightCream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-deepBlue px-6 py-4">
+            <a href="index.html" class="block text-lightCream hover:text-goldenGlow py-2 transition">Home</a>
+            <a href="about.html" class="block text-goldenGlow font-medium py-2 transition">About</a>
+            <a href="contact.html" class="block text-lightCream hover:text-goldenGlow py-2 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-yellow-400 to-red-500 text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+                Discover the pinnacle of lexical precision with the Ultimate Dictionary! A platform designed to empower
+                your vocabulary journey, offering seamless functionality and an intuitive user experience.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-10 flex-grow">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-deepBlue mb-6">Who We Are</h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                Welcome to the Ultimate Dictionary! Our team of web development experts created this state-of-the-art
+                application to provide users with a comprehensive repository of words, meanings, synonyms, and more. We
+                strive to deliver an exceptional experience that combines functionality with elegance, making your
+                journey into language exploration seamless and enjoyable.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-nightNavy text-lightCream py-4 text-center">
+        <p>🚀 Built with ❤️ by Web Development Masters &copy; 2025</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
