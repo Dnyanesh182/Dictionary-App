@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightCream: '#F4EAD5',
+                        goldenGlow: '#F7C873',
+                        sunsetOrange: '#E97A53',
+                        deepBlue: '#405D99',
+                        nightNavy: '#23395B',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-lightCream min-h-screen flex flex-col font-poppins">
+    <!-- Navbar -->
+    <nav class="bg-deepBlue shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-goldenGlow text-2xl font-bold hover:text-sunsetOrange">📘 Dictionary App</a>
+            <div class="flex space-x-6">
+                <a href="index.html" class="text-lightCream hover:text-goldenGlow transition">Home</a>
+                <a href="about.html" class="text-lightCream hover:text-goldenGlow transition">About</a>
+                <a href="contact.html" class="text-lightCream hover:text-goldenGlow transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-yellow-400 to-red-500 text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl md:text-2xl mb-8">Got a question, feedback, or just want to say hi? We'd love to hear from
+                you!</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <main class="container mx-auto px-6 py-10 flex-grow">
+        <div class="max-w-2xl mx-auto bg-lightCream shadow-lg rounded-lg p-6">
+            <form>
+                <div class="mb-6">
+                    <label for="name" class="block text-deepBlue font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-goldenGlow"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-deepBlue font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-goldenGlow"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-deepBlue font-medium mb-2">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="Enter your message"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-goldenGlow"
+                        required></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-deepBlue text-lightCream font-medium py-4 rounded-lg hover:bg-nightNavy transition">
+                    📩 Send Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-nightNavy text-lightCream py-4 text-center">
+        <p>🚀 Built with ❤️ by Web Development Masters &copy; 2025</p>
+    </footer>
+</body>
+
+</html>
