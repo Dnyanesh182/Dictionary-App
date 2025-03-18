@@ -1,0 +1,60 @@
+/* Custom styles that complement Tailwind CSS */
+
+/* Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Smooth transitions */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+}
+
+/* Button hover effects */
+.hover-grow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Form input focus effect */
+.input-focus-effect:focus {
+  box-shadow: 0 0 0 3px rgba(247, 200, 115, 0.5);
+}
